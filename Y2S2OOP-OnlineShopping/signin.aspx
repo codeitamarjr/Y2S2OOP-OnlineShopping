@@ -1,10 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="signup.aspx.cs" Inherits="signup" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="signin.aspx.cs" Inherits="Default2" %>
 
 <!DOCTYPE html>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title>Signup</title>
+    <title>Sign in</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=devive-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE-edge" />
@@ -16,7 +16,8 @@
     <meta student="23952 Itamar Atanasio da Silva Junior" />
 </head>
 <body>
-    <!-- Navigation-->
+
+     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container px-4 px-lg-5">
             <a class="navbar-brand" href="#!">On-line Shopping</a>
@@ -38,7 +39,7 @@
                     </li>
                 </ul>
 
-                <form id="form1" class="d-flex">
+                <form class="d-flex">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="signup.aspx">SignUp</a></li>
@@ -70,38 +71,28 @@
                     <div class="d-table-cell align-middle">
 
                         <div class="text-center mt-4">
-                            <h1 class="h2">Let's get start with your account to shopping!</h1>
+                            <h1 class="h2">Welcome back!</h1>
                             <p class="lead">
-                                Start creating the best possible user experience for you customers.
+                                Let's loge in to start shopping!
                             </p>
                         </div>
 
                         <div class="card">
                             <div class="card-body">
                                 <div class="m-sm-4">
-                                    <form runat="server">
+                                    <form id="form1" runat="server">
                                         <div class="form-group">
                                             <label>Username</label>
                                             &nbsp;<asp:TextBox ID="textUsername" runat="server" class="form-control form-control-lg" placeholder="Enter your name" required></asp:TextBox>
                                         </div>
                                         <div class="form-group">
-                                            <label>Name</label>
-                                            &nbsp;<asp:TextBox ID="txtName" runat="server" class="form-control form-control-lg" placeholder="Enter your name" required></asp:TextBox>
-                                        </div>
-                                        <div class="form-group">
-                                            <label>Email</label>
-                                            <asp:TextBox ID="textEmail" runat="server" class="form-control form-control-lg" type="email" placeholder="Enter your email" required></asp:TextBox>
-                                        </div>
-                                        <div class="form-group">
                                             <label>Password</label>
                                             <asp:TextBox ID="textPassword" runat="server" class="form-control form-control-lg" type="password" placeholder="Enter password" TextMode="Password" required></asp:TextBox>
                                         </div>
-                                        <div class="form-group">
-                                            <label>Confirm your Password</label>
-                                            <asp:TextBox ID="textConfirmPassword" runat="server" class="form-control form-control-lg" type="password" placeholder="Confirm your password" TextMode="Password" required></asp:TextBox>
-                                        </div>
+                                       
                                         <div class="text-center mt-3">
-                                            <asp:Button ID="signupButton" runat="server" Text="Sign up" class="btn btn-lg btn-primary" OnClick="signUP"/>
+                                            <asp:Button ID="login" runat="server" Text="Log in" class="btn btn-lg btn-primary" OnClick="login_Click"/>
+
                                         </div>
                                     </form>
                                 </div>
@@ -123,7 +114,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-
-
 </body>
 </html>
