@@ -28,20 +28,20 @@ public partial class Default2 : System.Web.UI.Page
 
             MySqlDataReader status = cmd.ExecuteReader();
 
-            if ( status.HasRows)
+            if (status.HasRows)
             {
-                
+
                 Response.Write("<script> alert('Login Succefully'); </script>");
                 Session["username"] = textUsername.Text.Trim();
                 conn.Close();
-                Response.Redirect("~/Default.aspx");
+                Response.Redirect("~/index.aspx");
             }
             else
             {
                 Response.Write("<script> alert('Username or Password incorrect.'); </script>");
-                
+
             }
-           
         }
     }
+
 }

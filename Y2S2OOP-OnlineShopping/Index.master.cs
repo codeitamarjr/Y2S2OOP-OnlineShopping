@@ -5,20 +5,25 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-public partial class _Default : System.Web.UI.Page
+public partial class Index : System.Web.UI.MasterPage
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        if(Session["username"] != null)
+        if (Session["username"] != null)
         {
-            loginTrue.Visible = false;
-        } else loginFalse.Visible = false;
+            publicArea.Visible = false;
+        }
+        else userArea.Visible = false;
     }
-
 
     protected void logout_Click(object sender, EventArgs e)
     {
         Session.Abandon();
-        Response.Redirect("~/Default.aspx");
+        Response.Redirect("~/index.aspx");
     }
+
+
+
+
+    
 }
