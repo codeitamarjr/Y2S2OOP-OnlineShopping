@@ -16,7 +16,7 @@
                     <!-- Profile picture help block-->
                     <div class="small font-italic text-muted mb-4">JPG or PNG no larger than 5 MB</div>
                     <!-- Profile picture upload button-->
-                    <button class="btn btn-primary" type="button">Upload new image</button>
+                    <asp:FileUpload ID="productImage" runat="server" class="form-control" />
                 </div>
             </div>
         </div>

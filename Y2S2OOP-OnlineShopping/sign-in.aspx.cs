@@ -30,16 +30,13 @@ public partial class Default2 : System.Web.UI.Page
 
             if (status.HasRows)
             {
-
-                Response.Write("<script> alert('Login Succefully'); </script>");
                 Session["username"] = textUsername.Text.Trim();
                 conn.Close();
-                Response.Redirect("~/index.aspx");
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", " alert('Login Succefully'); window.location ='index.aspx';", true);
             }
             else
             {
-                Response.Write("<script> alert('Username or Password incorrect.'); </script>");
-
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", " alert('Username or Password incorrect.'); window.location ='sign-in.aspx';", true);
             }
         }
     }

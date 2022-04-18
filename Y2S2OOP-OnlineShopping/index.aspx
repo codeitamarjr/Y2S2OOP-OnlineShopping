@@ -17,7 +17,7 @@
                                 <!-- Sale badge-->
                                 <div id="badge" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem"><%# Eval("product_sale") %></div>
                                 <!-- Product image-->
-                                <img class="card-img-top" src="img/<%# Eval("product_img") %>" alt="..." />
+                                <img class="card-img-top" src="img/productsImg/<%# Eval("product_img") %>" alt="..." />
                                 <!-- Product details-->
                                 <div class="card-body p-4">
                                     <div class="text-center">
@@ -33,7 +33,9 @@
                                 </div>
                                 <!-- Product actions-->
                                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                    <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                    <div class="text-center">
+                                    <asp:Button ID="addToCart" runat="server" Text="Add to cart" class="btn btn-outline-dark mt-auto"/>
+                                    </div>
                                 </div>
                             </div>
                         </div>
