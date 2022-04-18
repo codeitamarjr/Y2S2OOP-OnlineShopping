@@ -19,7 +19,7 @@ public partial class _Default : System.Web.UI.Page
         conn.ConnectionString = "server=localhost;user id=root;password=327538;database=onlineshopping";
 
         conn.Open();
-        MySqlCommand cmd = new MySqlCommand("INSERT INTO users (username, password, email, name) VALUES ('" + @textUsername.Text + "', '" + @textPassword.Text + "', '" + @textEmail.Text + "', '" + @txtName.Text + "')", conn);
+        MySqlCommand cmd = new MySqlCommand("INSERT INTO users (username, password, email, name, phone) VALUES ('" + @textUsername.Text + "', '" + @textPassword.Text + "', '" + @textEmail.Text + "', '" + @txtName.Text + "','" + @phone.Text + "')", conn);
 
         cmd.ExecuteNonQuery();
         conn.Close();

@@ -3,6 +3,7 @@ using System.Web.UI.WebControls;
 using MySql.Data.MySqlClient;
 using System.Configuration;
 using System.Data;
+using System.Web.UI;
 
 public partial class Default2 : System.Web.UI.Page
 {
@@ -21,10 +22,5 @@ public partial class Default2 : System.Web.UI.Page
                 }
             }
         }
-    }
-
-    protected void addToCart(object sender, EventArgs e)
-    {
-        
     }
 }

@@ -29,6 +29,10 @@
                                             &nbsp;<asp:TextBox ID="txtName" runat="server" class="form-control form-control-lg" placeholder="Enter your name" required></asp:TextBox>
                                         </div>
                                         <div class="form-group">
+                                            <label>Phone</label>
+                                            &nbsp;<asp:TextBox ID="phone" runat="server" class="form-control form-control-lg" type="phone" required></asp:TextBox>
+                                        </div>
+                                        <div class="form-group">
                                             <label>Email</label>
                                             <asp:TextBox ID="textEmail" runat="server" class="form-control form-control-lg" type="email" placeholder="Enter your email" required></asp:TextBox>
                                         </div>

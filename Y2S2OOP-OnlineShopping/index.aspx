@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Index.master" AutoEventWireup="true" CodeFile="index.aspx.cs" Inherits="Default2" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Index.master" AutoEventWireup="true" CodeFile="index.aspx.cs" Inherits="Default2" EnableEventValidation="false" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="title" runat="Server">
     Welcome to my Online Shopping
@@ -12,6 +12,7 @@
                 <asp:Repeater ID="repeaterItem" runat="server">
                     <ItemTemplate>
                         <!-- Product CARD Start-->
+                        <a class="text-decoration-none" href="viewProduct.aspx?idproduct=<%# Eval("idproduct") %>">
                         <div id="itemBlock" class="col mb-5">
                             <div class="card h-100">
                                 <!-- Sale badge-->
@@ -23,22 +24,19 @@
                                     <div class="text-center">
                                         <!-- Product name-->
                                         <h5 class="fw-bolder">
-                                            <a class="nav-link" href="<%# Eval("idproduct") %>">
+                                            
                                                 <%# Eval("product_name") %>
-                                            </a>
+                                            
                                         </h5>
                                         <!-- Product price-->
-                                        $<%# Eval("product_price") %>
-                                    </div>
+                                        $<%# Eval("product_price") %></div>
                                 </div>
                                 <!-- Product actions-->
                                 <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                    <div class="text-center">
-                                    <asp:Button ID="addToCart" runat="server" Text="Add to cart" class="btn btn-outline-dark mt-auto"/>
-                                    </div>
                                 </div>
                             </div>
                         </div>
+                            </a>
                         <!-- Product CARD Ends-->
                     </ItemTemplate>
                 </asp:Repeater>

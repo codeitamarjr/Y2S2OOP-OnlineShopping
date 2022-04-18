@@ -29,25 +29,14 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.aspx">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#!">All Products</a></li>
-                                <li>
-                                    <hr class="dropdown-divider" />
-                                </li>
-                                <li><a class="dropdown-item" href="#!">Popular Items</a></li>
-                                <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
-                            </ul>
-                        </li>
+                        <li class="nav-item"><a class="nav-link" href="about.aspx">About</a></li>
                     </ul>
 
 
                     <div runat="server" id="publicArea">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="sign-up.aspx">Sign Up</a></li>
-                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="sign-in.aspx">Sign in</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="sign-up.aspx">Register</a></li>
+                            <li class="nav-item"><a class="nav-link active" aria-current="page" href="sign-in.aspx">Log-in</a></li>
                         </ul>
                     </div>
                     <div runat="server" id="userArea">
@@ -65,9 +54,9 @@
 
                     </div>
 
-                    <button class="btn btn-outline-dark" type="submit">
-                        <i class="bi-cart-fill me-1"></i>Cart<span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-                    </button>
+                    <a class="btn btn-outline-dark" href="cart.aspx">
+                        <i class="bi-cart-fill me-1"></i>Cart<span class="badge bg-dark text-white ms-1 rounded-pill" id="pCount" runat="server">0</span>
+                    </a>
 
 
                 </div>
