@@ -16,7 +16,7 @@
                         <div id="itemBlock" class="col mb-5">
                             <div class="card h-100">
                                 <!-- Sale badge-->
-                                <div id="badge" class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem"><%# Eval("product_sale") %></div>
+                                <div id="badge" class="badge text-white position-absolute bg-danger" style="top: 0.5rem; right: 0.5rem"><%# Eval("product_sale") %></div>
                                 <!-- Product image-->
                                 <img class="card-img-top" src="img/productsImg/<%# Eval("product_img") %>" alt="..." />
                                 <!-- Product details-->

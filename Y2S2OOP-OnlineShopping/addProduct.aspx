@@ -48,7 +48,14 @@
                             <!-- Form Group (category)-->
                             <div class="col-md-6">
                                 <label class="small mb-1" for="inputOrgName">Category</label>
-                                <asp:TextBox ID="categoryProduct" runat="server" class="form-control" placeholder="Which caterogy belongs this product?" required></asp:TextBox>
+                                <asp:DropDownList ID="categoryProduct" runat="server" class="form-select" required>
+
+                                    <asp:ListItem Selected="True" Value="Smart watches"> Smart watches </asp:ListItem>
+                                    <asp:ListItem Value="Laptops"> Laptops </asp:ListItem>
+                                    <asp:ListItem Value="TV  Entertainment"> TV & Entertainment </asp:ListItem>
+                                    <asp:ListItem Value="Phones"> Phones </asp:ListItem>
+                                    <asp:ListItem Value="Gaming"> Gaming </asp:ListItem>
+                                </asp:DropDownList>
                             </div>
                             <!-- Form Group (location)-->
                             <div class="col-md-6">

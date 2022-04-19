@@ -33,8 +33,12 @@ public partial class _Default : System.Web.UI.Page
 
         conn.Open();
         MySqlCommand cmd = new MySqlCommand("INSERT INTO product (product_quantity, product_name, product_description, product_price, product_category, product_img)" +
-            "VALUES('" + @quantity.Text + "', '" + productName.Text + "', '" + descriptionItem.Text + "', '" + priceItem.Text + "', '" + categoryProduct.Text + "','" + 
-            productName.Text.ToString().Trim() + "01" + Path.GetExtension(productImage.PostedFile.FileName) + "')", conn);
+            "VALUES('" + @quantity.Text + "', '" 
+            + MySql.Data.MySqlClient.MySqlHelper.EscapeString(productName.Text) + "', '" 
+            + MySql.Data.MySqlClient.MySqlHelper.EscapeString(descriptionItem.Text) + "', '" 
+            + priceItem.Text + "', '" 
+            + MySql.Data.MySqlClient.MySqlHelper.EscapeString(categoryProduct.Text) + "','" 
+            + MySql.Data.MySqlClient.MySqlHelper.EscapeString(productName.Text.ToString().Trim()) + "01" + Path.GetExtension(productImage.PostedFile.FileName) + "')", conn);
         cmd.ExecuteNonQuery();
         conn.Close();
         ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", " alert('Product added Succefully'); window.location ='index.aspx';", true);

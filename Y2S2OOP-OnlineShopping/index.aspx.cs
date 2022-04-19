@@ -11,7 +11,21 @@ public partial class Default2 : System.Web.UI.Page
     {
         using (MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["MyOnlineShoppingDB"].ConnectionString))
         {
-            using (MySqlCommand cmd = new MySqlCommand("SELECT * FROM product", conn))
+            string filter = "";
+            string category = Request.QueryString["category"];
+            if(category != null)
+            {
+                filter = "WHERE product_category = '" + category + " ' ";
+            }
+            if (category == "ASC")
+            {
+                filter = "order by date desc";
+            }
+            if (category == "SALE")
+            {
+                filter = "WHERE product_sale = 'SALE'";
+            }
+            using (MySqlCommand cmd = new MySqlCommand("SELECT * FROM product "+ filter, conn))
             {
                 using (MySqlDataAdapter sda = new MySqlDataAdapter(cmd))
                 {

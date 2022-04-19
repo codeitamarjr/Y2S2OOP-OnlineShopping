@@ -29,7 +29,22 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                         <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.aspx">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="about.aspx">About</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="index.aspx">All Products</a></li>
+                                <li><a class="dropdown-item" href="index.aspx?category=ASC">New Products</a></li>
+                                <li>
+                                    <hr class="dropdown-divider" />
+                                </li>
+                                <li><a class="dropdown-item" href="index.aspx?category=Gaming">Gaming</a></li>
+                                <li><a class="dropdown-item" href="index.aspx?category=Smart watches">Smart watches</a></li>
+                                <li><a class="dropdown-item" href="index.aspx?category=TV  Entertainment">TV & Entertainment</a></li>
+                                <li><a class="dropdown-item" href="index.aspx?category=Laptops">Laptops</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link active" href="index.aspx?category=SALE">Sale</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="about.aspx">About</a></li>
                     </ul>
 
 
