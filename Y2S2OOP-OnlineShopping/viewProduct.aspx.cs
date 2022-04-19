@@ -13,7 +13,6 @@ using MySql.Data.MySqlClient;
 public partial class _Default : System.Web.UI.Page
 {
 
-    public static String CS = ConfigurationManager.ConnectionStrings["MyOnlineShoppingDB"].ConnectionString;
     protected void Page_Load(object sender, EventArgs e)
     {
         if (!IsPostBack)
@@ -44,6 +43,36 @@ public partial class _Default : System.Web.UI.Page
     protected void addToCart_Click(object sender, EventArgs e)
     {
         Int64 productID = Convert.ToInt64(Request.QueryString["idproduct"]);
+        
+        
+            
+            if (Request.Cookies["cartPID"] != null)
+            {
+                string CookiePID = Request.Cookies["cartPID"].Value.Split('=')[1];
+                CookiePID = CookiePID + "," + productID;
+
+                HttpCookie CartProducts = new HttpCookie("cartPID");
+                CartProducts.Values["cartPID"] = CookiePID;
+                CartProducts.Expires = DateTime.Now.AddDays(30);
+                Response.Cookies.Add(CartProducts);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", " alert('Product added to your cart'); window.location ='cart.aspx';", true);
+        }
+            else
+            {
+                HttpCookie CartProducts = new HttpCookie("cartPID");
+                CartProducts.Values["cartPID"] = productID.ToString();
+                CartProducts.Expires = DateTime.Now.AddDays(30);
+                Response.Cookies.Add(CartProducts);
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", " alert('Product added to your cart'); window.location ='cart.aspx';", true);
+        }
+        
+       
+
+
+
+
+
+       /* Int64 productID = Convert.ToInt64(Request.QueryString["idproduct"]);
         if (Session["username"] == null)
         {
             ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", " alert('You have to log in to buy a product'); window.location ='sign-in.aspx';", true);
@@ -58,6 +87,6 @@ public partial class _Default : System.Web.UI.Page
                 conn.Close();
                 ScriptManager.RegisterStartupScript(this, this.GetType(), "alert", " alert('Product added to your cart'); window.location ='cart.aspx';", true);
             
-        }
+        }*/
     }
 }

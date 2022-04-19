@@ -70,7 +70,8 @@
                     </div>
 
                     <a class="btn btn-outline-dark" href="cart.aspx">
-                        <i class="bi-cart-fill me-1"></i>Cart<span class="badge bg-dark text-white ms-1 rounded-pill" id="pCount" runat="server">0</span>
+                        <i class="bi-cart-fill me-1"></i>Cart
+                        <span class="badge bg-dark text-white ms-1 rounded-pill" id="pCount" runat="server"></span>
                     </a>
 
 
