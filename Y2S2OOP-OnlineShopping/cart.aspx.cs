@@ -19,9 +19,12 @@ public partial class _Default : System.Web.UI.Page
         }
     }
 
+
+
+
     private void BindProductCart()
     {
-        using (MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["MyOnlineShoppingDB"].ConnectionString))
+/*        using (MySqlConnection conn = new MySqlConnection(ConfigurationManager.ConnectionStrings["MyOnlineShoppingDB"].ConnectionString))
         {
             Int64 productid = Convert.ToInt64(Request.QueryString["idproduct"]);
             using (MySqlCommand cmd = new MySqlCommand("SELECT * FROM cart WHERE username = '" + Session["username"] + "'", conn))
@@ -34,6 +37,6 @@ public partial class _Default : System.Web.UI.Page
                     viewCart.DataBind();
                 }
             }
-        }
+        }*/
     }
 }
